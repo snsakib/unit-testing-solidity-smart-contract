@@ -1,8 +1,8 @@
-# Develop Smart Contract for NFT Marketplace
+# Unit Testing Solidity Smart Contract
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/your-username/mastering-state-management/blob/main/LICENSE)
 
-Welcome to the repository for the project code of the online project [Develop Smart Contract for NFT Marketplace](https://educat.tv/3HcT7Gu).
+Welcome to the repository for the project code of the online project [Unit Testing Solidity Smart Contract](https://educat.tv/3HcT7Gu).
 
 This project is built on the Ethereum blockchain that enables users to mint, list, and trade non-fungible tokens (NFTs). The smart contract is written in **Solidity**, utilizing the **ERC721** token standard for unique token identification.
 
