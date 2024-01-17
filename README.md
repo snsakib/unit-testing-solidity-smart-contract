@@ -25,13 +25,13 @@ To get started with the course project code, follow these steps:
 1. Clone this repository to your local machine using the following command:
 
     ```shell
-    git clone https://github.com/snsakib/develop-smart-contract-for-nft-marketplace.git
+    git clone https://github.com/snsakib/unit-testing-solidity-smart-contract.git
     ```
 
 2. Change to the project directory:
 
     ```shell
-    cd develop-smart-contract-for-nft-marketplace
+    cd unit-testing-solidity-smart-contract
     ```
 
 3. Install the dependencies using npm or yarn:
