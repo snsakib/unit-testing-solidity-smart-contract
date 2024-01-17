@@ -1,5 +1,5 @@
 {
-  "name": "develop-smart-contract-for-nft-marketplace",
+  "name": "unit-testing-solidity-smart-contract",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/snsakib/develop-smart-contract-for-nft-marketplace.git"
+    "url": "git+https://github.com/snsakib/unit-testing-solidity-smart-contract.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/snsakib/develop-smart-contract-for-nft-marketplace/issues"
+    "url": "https://github.com/snsakib/unit-testing-solidity-smart-contract/issues"
   },
-  "homepage": "https://github.com/snsakib/develop-smart-contract-for-nft-marketplace#readme",
+  "homepage": "https://github.com/snsakib/unit-testing-solidity-smart-contract#readme",
   "dependencies": {
     "@nomicfoundation/hardhat-toolbox": "3.0.0",
     "@openzeppelin/contracts": "4.9.3",
