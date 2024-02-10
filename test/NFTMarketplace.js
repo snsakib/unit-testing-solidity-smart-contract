@@ -78,4 +78,29 @@ describe("NFTMarketplace", function () {
       expect(user1NFTs[1].owner).to.equal(user1.address);
     });
   });
+
+  describe("buyNFT", function () {
+    it("Should allow a user to buy an NFT", async () => {
+      const { nftMarketplace, user1, user2, listingPrice } = await loadFixture(
+        deploySmartContractFixture
+      );
+
+      // Mint an NFT
+      await nftMarketplace
+        .connect(user1)
+        .mintNFT("NFT_URI", 500000000, { value: listingPrice });
+
+      // Get the ID of the minted NFT
+      const allNFTs = await nftMarketplace.getAllNFTs();
+      const nftId = allNFTs[0].id;
+
+      // User2 buys the NFT
+      await nftMarketplace.connect(user2).buyNFT(nftId, { value: 500000000 });
+
+      // Check if the NFT has been transferred successfully
+      const user2NFTs = await nftMarketplace.connect(user2).getMyNFTs();
+      expect(user2NFTs.length).to.equal(1);
+      expect(user2NFTs[0].owner).to.equal(user2.address);
+    });
+  });
 });
