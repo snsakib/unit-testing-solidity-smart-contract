@@ -33,4 +33,24 @@ describe("NFTMarketplace", function () {
       expect(allNFTs[0].owner).to.equal(user1.address);
     });
   });
+
+  describe("getAllNFTs", function () {
+    it("Should return all NFTs", async () => {
+      const { nftMarketplace, user1, user2, listingPrice } = await loadFixture(
+        deploySmartContractFixture
+      );
+
+      // Mint a couple of NFTs
+      await nftMarketplace
+        .connect(user1)
+        .mintNFT("NFT1_URI", 200000000, { value: listingPrice });
+      await nftMarketplace
+        .connect(user2)
+        .mintNFT("NFT2_URI", 300000000, { value: listingPrice });
+
+      // Check if getAllNFTs returns the correct number of NFTs
+      const allNFTs = await nftMarketplace.getAllNFTs();
+      expect(allNFTs.length).to.equal(2);
+    });
+  });
 });
